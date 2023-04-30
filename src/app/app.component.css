@@ -1,0 +1,4 @@
+.outlet-container {
+    height: calc(100% - 60pt);
+    width: 100%;
+}
