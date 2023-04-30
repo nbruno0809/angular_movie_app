@@ -9,7 +9,7 @@ export class MovieService {
 
     constructor(private http: HttpClient) { }
 
-     fetchPopularMovies() {
-        return this.http.get(`${API_URL}/movie/popular?api_key=${API_KEY}`);
+     fetchPopularMovies(page: number) {
+        return this.http.get(`${API_URL}/movie/popular?api_key=${API_KEY}&page=${page}`);
     }
 }

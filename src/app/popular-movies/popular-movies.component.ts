@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MovieService } from '../services/movieService';
+import { MovieDemo } from '../model/MovieDemo';
 
 @Component({
   selector: 'app-popular-movies',
@@ -8,13 +9,23 @@ import { MovieService } from '../services/movieService';
 })
 
 export class PopularMoviesComponent {
-  movies: any;
+  movies: MovieDemo[] = [];
+  page = 1;
 
 constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
-    this.movieService.fetchPopularMovies().subscribe((data :any) => {
+    this.page=1;
+    this.movieService.fetchPopularMovies(this.page).subscribe((data :any) => {
       this.movies = data['results'];
+    });
+  }
+
+  loadMore(): void {
+    
+    this.page++;
+    this.movieService.fetchPopularMovies(this.page).subscribe((data :any) => {
+      this.movies = [...this.movies,...data['results']];
     });
   }
 }

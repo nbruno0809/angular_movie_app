@@ -9,6 +9,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -24,6 +25,8 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     HttpClientModule,
     MatCardModule,
+    MatButtonModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

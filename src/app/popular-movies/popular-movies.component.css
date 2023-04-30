@@ -25,6 +25,7 @@
    margin: 10pt;
    display: flex;
    flex-direction: column;
+   justify-content: space-between;
 }
 
 .card > img {
@@ -49,4 +50,16 @@ p {
 .sign {
     
     margin-top: 5pt;
+}
+
+.see-more-button {
+    align-self: flex-end;
+}
+
+.load-more-button {
+    background-color: #f5f5f7da;
+    width: calc(100% - 5pt);
+    min-height: 40pt;
+    margin: 5pt;
+    font-size: large;
 }
