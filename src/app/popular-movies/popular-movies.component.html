@@ -1,12 +1,14 @@
 <div class="container">
-    <h1>Popular Movies</h1>
+    <img src="/assets/popularsign.png" class="sign">
   <div class="card-container">
   <mat-card *ngFor="let movie of movies" class="card">
-    <mat-card-header class="card-header">
-      <mat-card-title>{{movie.title}}</mat-card-title>
-      <mat-card-subtitle>{{movie.release_date}}</mat-card-subtitle>
-    </mat-card-header>
+    
     <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" alt="{{ movie.title }}">
+    <div class="card-content">
+        <mat-card-title>{{movie.title}}</mat-card-title>
+        <mat-card-subtitle>{{movie.release_date}}</mat-card-subtitle>
+        <p>{{movie.overview}}</p>
+      </div>
     <!-- <mat-card-content>
       <p>
        {{movie.overview}}
