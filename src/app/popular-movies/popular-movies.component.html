@@ -10,16 +10,8 @@
         <mat-card-subtitle>{{movie.release_date}}</mat-card-subtitle>
         </div>
         <p>{{movie.overview.slice(0,300)+(movie.overview.length>300 ? "..." :"")}}</p>
-        <button mat-raised-button class="see-more-button">See more</button>
+        <button [routerLink]="'/movie/'+movie.id" mat-raised-button class="see-more-button">See more</button>
       </div>
-    <!-- <mat-card-content>
-      <p>
-       {{movie.overview}}
-      </p>
-    </mat-card-content> -->
-    <!-- <mat-card-footer>
-        {{movie.popularity}}
-    </mat-card-footer> -->
   </mat-card>
   <button class="load-more-button" mat-raised-button (click)="loadMore()">More movies...</button>
 </div>

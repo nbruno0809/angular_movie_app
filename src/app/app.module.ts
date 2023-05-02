@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { MatButtonModule } from '@angular/material/button';
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
+    MatChipsModule,
 
   ],
   providers: [],
