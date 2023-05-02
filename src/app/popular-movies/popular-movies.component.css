@@ -45,10 +45,12 @@
 p {
     margin-top: 10pt;
     font-size: large;
+    max-height: 50%;
+    overflow: hidden;
 }
 
 .sign {
-    
+    width: 70%;
     margin-top: 5pt;
 }
 

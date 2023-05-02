@@ -8,6 +8,7 @@
     background-image: url("/assets/bg.jpg");
     background-size: cover;
     justify-content: center;
+    color:#1d1d1f;
 }
 
 .poster-container {
@@ -18,6 +19,10 @@
     align-items: center;
 }
 
+.poster-container > img {
+    max-height: 100%;
+}
+
 .content-container {
     height: calc(95% - 40pt);
     width: calc(60% - 40pt);
@@ -25,41 +30,15 @@
     padding: 20pt;
     display: flex;
     flex-direction: column;
-
+    justify-content: space-between;
 }
 
-.poster-container > img {
-    height: 100%;
-}
-
-.images-container {
-    height: 250pt;
-    width: 95%;
-    gap: 3pt;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-self: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
 
 h1 {
     font-size: xx-large;
     font-weight: bold;
 }
-.back-button {
-    background-color: #f5f5f7;
-    color:#1d1d1f;
-    margin:10pt;
-    margin-top: 25pt;
-    align-self: flex-start;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30pt;
-    width: 30pt;
-}
+
 
  .arrow-icon {
     max-height: 30pt;
@@ -73,6 +52,23 @@ h1 {
     opacity: 1 ;
 }
 
+
+.text.container {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.images-container {
+    height: 30%;
+    width: 95%;
+    gap: 3pt;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-self: center;
+    overflow-y: hidden;
+}
+
 .image-div {
     background-position: center;
     background-repeat: no-repeat;
@@ -80,10 +76,54 @@ h1 {
     height: 100%;
     flex: 1;
     border-radius: 5pt;
-    max-width: 50%;
+    max-width: 40%;
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .image-div:hover {
     flex: 8;
+}
+
+.rating-box {
+    color: #f5f5f7;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 25pt;
+    max-width: 25pt;
+    padding: 5pt;
+    border-radius: 5pt;
+}
+
+
+td {
+    padding: 3pt;
+    font-size:medium;
+}
+
+table {
+    margin-top: 15pt;
+    margin-bottom: 15pt;
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   gap: 10pt;
+   margin-bottom: 15pt;
+}
+
+p {
+    max-height: 40% ;
+    overflow-y: scroll;
+}
+
+p::-webkit-scrollbar {
+    display: none;
+} 
+
+a {
+    color: #ff5882 ;
 }

@@ -3,6 +3,7 @@ import { MovieDetails } from '../model/MovieDetails';
 import { MovieService } from '../services/movieService';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { FormatService } from '../services/formatService';
 
 @Component({
   selector: 'app-movie-details',
@@ -16,6 +17,7 @@ export class MovieDetailsComponent {
 
   constructor(
     private movieService: MovieService,
+    public formatService: FormatService,
     private  route: ActivatedRoute,
     private location: Location
     ) {}
