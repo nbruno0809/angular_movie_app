@@ -19,7 +19,7 @@
                     <td>Original language: {{movie.original_language}}</td>
                 </tr>
                 <tr>
-                    <td>Budget: {{(movie!==null) ? (formatService.budgetToString( movie.budget )) : "No information"}}</td>
+                    <td>Budget: {{(movie.budget) ? (formatService.budgetToString( movie.budget )) : "No information"}}</td>
                 </tr>
                 <tr *ngIf="movie.homepage">
                     <td>Webpage: <a [href]="movie.homepage">
