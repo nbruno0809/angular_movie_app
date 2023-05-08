@@ -124,6 +124,16 @@ p::-webkit-scrollbar {
     display: none;
 } 
 
-a {
+.webpage-link {
     color: #ff5882 ;
+}
+
+a.cast-link {
+    color:#1d1d1f;
+    cursor: pointer;
+}
+
+a.cast-link:hover {
+    color: #ff5882;
+    cursor: pointer;
 }

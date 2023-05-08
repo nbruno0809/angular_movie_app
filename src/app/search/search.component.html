@@ -1,0 +1,23 @@
+<div class="search-container">
+    <div class="search-content-area">
+        <div class="search-bar">
+            <a  (click)="changePage(false)" *ngIf="page>1"><</a>
+            <input type="text" placeholder="Search..." (change)="onChange($event)"/>
+            <button [routerLink]="'/search/'+queryString"><img src="../../assets/searchicon.svg" height="20pt" (click)="onSearch()"  /></button>
+            <a (click)="changePage(true)" *ngIf="maxPage && page<maxPage">></a>
+        </div>
+        <div class="search-result-container">
+       <div *ngFor="let movie of resultMovies" class="search-movie-container">
+        <img *ngIf="movie.poster_path" [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" alt="{{ movie.title }}">
+        <div>
+        <div>
+        <strong>{{movie.title}}</strong>
+        <br>
+        {{movie.release_date}}
+        </div>
+        <a [routerLink]="'/movie/'+movie.id">See more</a>
+        </div>
+       </div>
+        </div>
+    </div>
+</div>

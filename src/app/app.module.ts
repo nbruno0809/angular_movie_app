@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
+import { SearchComponent } from './search/search.component';
+import { ActorComponent } from './actor/actor.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { MatChipsModule } from '@angular/material/chips';
     AppComponent,
     PopularMoviesComponent,
     NavbarComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    SearchComponent,
+    ActorComponent
   ],
   imports: [
     BrowserModule,

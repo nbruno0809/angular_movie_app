@@ -4,6 +4,7 @@ import { MovieService } from '../services/movieService';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { FormatService } from '../services/formatService';
+import { CastMember } from '../model/CastMember';
 
 @Component({
   selector: 'app-movie-details',
@@ -12,6 +13,7 @@ import { FormatService } from '../services/formatService';
 })
 export class MovieDetailsComponent {
   movie: MovieDetails | null =  null;
+  cast: CastMember[] = []
   imgPaths: string[]=[];
   MAX_IMG_COUNT = 12;
 
@@ -27,8 +29,13 @@ export class MovieDetailsComponent {
     if (id !== null) {
     this.movieService.fetchMovieDetails(+id).subscribe((data : MovieDetails) => {
       this.movie = data as MovieDetails;
-      console.log(this.movie)
     });
+
+    this.movieService.fetchCast(+id).subscribe((data:any)=>{
+      this.cast=data["cast"]
+      this.cast = this.cast.filter(a=>a.order<8).sort((a,b) => a.order-b.order)
+    })
+
 
     this.movieService.fetchMoviePictures(+id).subscribe((data : any) => {
       let b = data["backdrops"];

@@ -21,4 +21,12 @@ export class MovieService {
     fetchMoviePictures(id: number) {
         return this.http.get(`${API_URL}/movie/${id}/images?api_key=${API_KEY}&language=en`);
     }
+
+    fetchSearchedMovies(query: string, page:number) {
+        return this.http.get(`${API_URL}/search/movie?api_key=${API_KEY}&query=${query}&page=${page}`);
+    }
+
+    fetchCast(movieId : number) {
+        return this.http.get(`${API_URL}/movie/${movieId}/credits?api_key=${API_KEY}`);
+    }
 }
