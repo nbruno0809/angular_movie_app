@@ -11,23 +11,24 @@
     <div class="content-container">
         <div class="text-container">
             <h1>{{person.name}}</h1>
-
-            <table>
-                <tr>
-                    <td>Known for: {{person.known_for_department}}</td>
-                </tr>
-                <tr>
-                    <td>Born: {{person.birthday+(person.place_of_birth ? " ,"+person.place_of_birth : "")}}</td>
-                </tr>
-                
-                
-            </table>
-
-        
-
-            <p>{{person.biography}}</p>
+            <h4>Known for: {{person.known_for_department}}</h4>
+            <h4>Born: {{person.birthday+(person.place_of_birth ? " ,"+person.place_of_birth : "")}}</h4>
         </div>
+        <div class="bio-container"><p>{{person.biography}}</p></div>
 
-
+        <div class="table-container">
+           <table>
+               <tr>
+                  <th>Movie</th>
+                  <th>Played character</th>
+                  <th>Release date <button (click)="toggleSort()"><img src="../../assets/updown.svg"/></button></th>
+               </tr>
+               <tr *ngFor="let role of roles">
+                   <td><a [href]="'/movie/'+role.id">{{role.title}}</a></td>
+                   <td>{{role.character=="" ? "-" : role.character}}</td>
+                   <td>{{role.release_date=="" ? "-" : role.release_date}}</td>
+               </tr> 
+           </table>
+         </div>
     </div>
 </div>

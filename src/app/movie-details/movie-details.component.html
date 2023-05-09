@@ -36,8 +36,9 @@
 
         <div class="rating-container">
             Rating:
-            <div class="rating-box" [style]="'background-color:'+formatService.ratingRGBA(movie.vote_average)+';'">
+            <div *ngIf="movie.vote_count>0" class="rating-box" [style]="'background-color:'+formatService.ratingRGBA(movie.vote_average)+';'">
                 {{movie.vote_average}}</div>
+            <div *ngIf="movie.vote_count==0">No ratings yet</div>
         </div>
         
         <p>{{movie.overview}}</p>

@@ -33,4 +33,8 @@ export class MovieService {
     fetchPerson(personId: number) {
         return this.http.get(`${API_URL}/person/${personId}?api_key=${API_KEY}`);
     }
+
+    fetchRoles(personId: number) {
+         return this.http.get(`${API_URL}/person/${personId}/movie_credits?api_key=${API_KEY}`);
+    }
 }

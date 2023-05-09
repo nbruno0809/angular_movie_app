@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Person } from '../model/Person';
 import { MovieService } from '../services/movieService';
 import { Location } from '@angular/common';
+import { MovieRole } from '../model/MovieRole';
 
 @Component({
   selector: 'app-actor',
@@ -12,6 +13,7 @@ import { Location } from '@angular/common';
 export class ActorComponent {
 
   person: Person | undefined;
+  roles: MovieRole[]=[]
 
   constructor(private route: ActivatedRoute,private movieService :MovieService,private location: Location) {}
 
@@ -21,6 +23,11 @@ export class ActorComponent {
       this.movieService.fetchPerson(+id).subscribe((p:any)=>{
         this.person=p as Person
       })
+
+      this.movieService.fetchRoles(+id).subscribe((r:any)=>{
+        this.roles = r["cast"] as MovieRole[]
+        this.roles = this.roles.filter(a=>a.release_date!=="").sort((a,b)=>(a.release_date < b.release_date ? 1 : -1))
+      })
     }
     
   }
@@ -28,4 +35,14 @@ export class ActorComponent {
    goBack() {
     this.location.back()
   }
+
+  isAsc = false;
+  toggleSort() {
+    this.isAsc = !this.isAsc
+    if (this.isAsc)
+      this.roles = this.roles.sort((a,b)=>(a.release_date > b.release_date ? 1 : -1))
+    else
+      this.roles = this.roles.sort((a,b)=>(a.release_date < b.release_date ? 1 : -1))
+  }
+
 }
