@@ -18,7 +18,10 @@
                     <td>Original language: {{movie.original_language}}</td>
                 </tr>
                 <tr>
-                    <td>Cast: <a class="cast-link" *ngFor="let c of cast">{{c.name}} ({{c.character}}), </a></td>
+                    <td>Cast: 
+                        <a class="cast-link" *ngFor="let c of cast" [routerLink]="'/actor/'+c.id">
+                            {{c.name}} {{c.character != "" ? "("+c.character+")" : ""}}, 
+                        </a></td>
                 </tr>
                 <tr>
                     <td>Budget: {{(movie.budget) ? (formatService.budgetToString( movie.budget )) : "No information"}}</td>

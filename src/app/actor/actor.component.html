@@ -1,1 +1,33 @@
-<p>actor works!</p>
+<div *ngIf="person!=null" class="container">
+    <!-- <button mat-fab (click)="goBack()" class="back-button">Back</button> -->
+
+
+
+
+    <img src="/assets/leftarrowincircle.svg" (click)="goBack()" class="arrow-icon" />
+    <div class="poster-container">
+        <img [src]="'https://image.tmdb.org/t/p/w500/' + person.profile_path" alt="{{ person.name }}">
+    </div>
+    <div class="content-container">
+        <div class="text-container">
+            <h1>{{person.name}}</h1>
+
+            <table>
+                <tr>
+                    <td>Known for: {{person.known_for_department}}</td>
+                </tr>
+                <tr>
+                    <td>Born: {{person.birthday+(person.place_of_birth ? " ,"+person.place_of_birth : "")}}</td>
+                </tr>
+                
+                
+            </table>
+
+        
+
+            <p>{{person.biography}}</p>
+        </div>
+
+
+    </div>
+</div>

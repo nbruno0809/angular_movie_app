@@ -15,7 +15,7 @@
     height: 95%;
     max-width: 40%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -131,6 +131,7 @@ p::-webkit-scrollbar {
 a.cast-link {
     color:#1d1d1f;
     cursor: pointer;
+    text-decoration: none;
 }
 
 a.cast-link:hover {
