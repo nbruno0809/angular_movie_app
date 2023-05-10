@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { SearchComponent } from './search/search.component';
 import { ActorComponent } from './actor/actor.component';
+import { TopRateComponent } from './top-rate/top-rate.component';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import { ActorComponent } from './actor/actor.component';
     NavbarComponent,
     MovieDetailsComponent,
     SearchComponent,
-    ActorComponent
+    ActorComponent,
+    TopRateComponent,
+
   ],
   imports: [
     BrowserModule,

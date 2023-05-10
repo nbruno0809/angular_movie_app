@@ -14,6 +14,10 @@ export class MovieService {
         return this.http.get(`${API_URL}/movie/popular?api_key=${API_KEY}&page=${page}`);
     }
 
+     fetchTopRated(page: number) {
+        return this.http.get(`${API_URL}/movie/top_rated?api_key=${API_KEY}&page=${page}`);
+    }
+
     fetchMovieDetails(id: number) {
         return this.http.get<MovieDetails>(`${API_URL}/movie/${id}?api_key=${API_KEY}`);
     }

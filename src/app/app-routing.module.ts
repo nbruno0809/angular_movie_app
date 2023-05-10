@@ -4,13 +4,16 @@ import { PopularMoviesComponent } from './popular-movies/popular-movies.componen
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { SearchComponent } from './search/search.component';
 import { ActorComponent } from './actor/actor.component';
+import { TopRateComponent } from './top-rate/top-rate.component';
 
 const routes: Routes = [
   { path: '', component: PopularMoviesComponent  },
+  { path: 'popular', component: PopularMoviesComponent  },
   { path: 'movie/:id', component: MovieDetailsComponent},
   { path:"search", component: SearchComponent },
   {path:"search/:query", component: SearchComponent},
-  {path: "actor/:id", component: ActorComponent}
+  {path: "actor/:id", component: ActorComponent},
+  { path: "toprated", component: TopRateComponent}
 ];
 
 @NgModule({

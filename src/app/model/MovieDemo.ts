@@ -4,6 +4,6 @@ export interface MovieDemo {
     poster_path: string,
     release_date: string,
     overview: string,
-    popuarity: number,
+    vote_average: number,
     genre_ids: number[]
 }
