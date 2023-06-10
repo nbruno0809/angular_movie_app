@@ -1,4 +1,17 @@
 # Angular movie app
+You can check the most popular and and top rated movies of the day...
+![image](https://github.com/nbruno0809/angular_movie_app/assets/79459734/b5655590-db50-45cf-adf1-b1a2e1db1ecb)
+
+view the details...
+![image](https://github.com/nbruno0809/angular_movie_app/assets/79459734/1454dc8d-c03e-4048-8c30-28c41e82c928)
+
+see the actors...
+![image](https://github.com/nbruno0809/angular_movie_app/assets/79459734/16a63c31-fea3-4701-b492-238ed390b083)
+
+and seach for movies.
+![image](https://github.com/nbruno0809/angular_movie_app/assets/79459734/c13d2714-1829-42c6-aa02-fdb0908d592c)
+
+Made with Angular TypeScript
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
