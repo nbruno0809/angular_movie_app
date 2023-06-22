@@ -13,6 +13,8 @@ and seach for movies.
 
 Made with Angular TypeScript
 
+The project uses the TMDB API
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
 ## Development server
